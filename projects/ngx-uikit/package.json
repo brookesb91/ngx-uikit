@@ -1,0 +1,10 @@
+{
+  "name": "ngx-uikit",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
+    "@types/uikit": "^2.27.6",
+    "uikit": "^3.0.0-rc.9"
+  }
+}

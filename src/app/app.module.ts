@@ -3,12 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { UkAlertModule, UkAnimationModule } from 'ngx-uikit';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    UkAlertModule,
+    UkAnimationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

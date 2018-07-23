@@ -15,6 +15,15 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-uikit": [
+        "dist/ngx-uikit",
+        "dist/ngx-uikit"
+      ],
+      "ngx-uikit/*": [
+        "dist/ngx-uikit/*"
+      ]
+    }
   }
 }

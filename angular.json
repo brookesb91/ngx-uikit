@@ -23,9 +23,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/uikit/dist/css/uikit.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/uikit/dist/js/uikit.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -115,6 +118,46 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ngx-uikit": {
+      "root": "projects/ngx-uikit",
+      "sourceRoot": "projects/ngx-uikit/src",
+      "projectType": "library",
+      "prefix": "uk",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-uikit/tsconfig.lib.json",
+            "project": "projects/ngx-uikit/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ngx-uikit/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-uikit/src/test.ts",
+            "tsConfig": "projects/ngx-uikit/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-uikit/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-uikit/tsconfig.lib.json",
+              "projects/ngx-uikit/tsconfig.spec.json"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]

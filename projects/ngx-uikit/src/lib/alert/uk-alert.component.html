@@ -1,0 +1,11 @@
+<div
+    [ukAlert]="level"
+    uk-alert
+>
+    <a
+        class="uk-alert-close"
+        uk-close
+        *ngIf="close"
+    ></a>
+    <ng-content></ng-content>
+</div>
